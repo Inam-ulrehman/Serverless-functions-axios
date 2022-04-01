@@ -2,7 +2,9 @@ const result = document.querySelector('.result')
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get('/api/2-basic-Api')
+    const { data } = await axios.get(
+      'https://serverless-function-axios.netlify.app/api/2-basic-Api'
+    )
     const results = data
       .map((item) => {
         const {
